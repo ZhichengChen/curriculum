@@ -297,9 +297,9 @@
       "tests": [
         {
           "text":
-            "你的 <code>p</code> 元素 should contain the first few words of the provided <code>kitty ipsum text</code>.",
+            "你的 <code>p</code> 元素应当以 <code>kitty ipsum text</code> 开始。",
           "testString":
-            "assert.isTrue((/Kitty(\\s)+ipsum/gi).test($(\"p\").text()), 'Your <code>p</code> element should contain the first few words of the provided <code>kitty ipsum text</code>.');"
+            "assert.isTrue((/Kitty(\\s)+ipsum/gi).test($(\"p\").text()), '你的 <code>p</code> 元素应当以 <code>kitty ipsum text</code> 开始。');"
         }
       ],
       "challengeType": 0,
@@ -363,38 +363,38 @@
     },
     {
       "id": "bad87fee1348bd9aedf08802",
-      "title": "Uncomment HTML",
+      "title": "删除 HTML 的注释",
       "description": [
-        "Commenting is a way that you can leave comments for other developers within your code without affecting the resulting output that is displayed the end user.",
-        "Commenting is also a convenient way to make code inactive without having to delete it entirely.",
-        "Comments in HTML starts with <code>&#60;!--</code>, and ends with a <code>--&#62;</code>",
+        "注释的一个作用是，你可以在代码里给其它的开发者写一些介绍程序的文字，同时不会让用户看到。",
+        "注释还可以让你的代码失效，在不用删除这些代码的前提下。",
+        "HTML 里的注释以 <code>&#60;!--</code> 开始, 以 <code>--&#62;</code> 结束",
         "<hr>",
-        "Uncomment your <code>h1</code>, <code>h2</code> and <code>p</code> elements."
+        "删除 <code>h1</code>, <code>h2</code> 和 <code>p</code> 的注释。"
       ],
       "tests": [
         {
           "text":
-            "Make your <code>h1</code> element visible on your page by uncommenting it.",
+            "删除注释，显示 <code>h1</code> 元素。",
           "testString":
-            "assert($(\"h1\").length > 0, 'Make your <code>h1</code> element visible on your page by uncommenting it.');"
+            "assert($(\"h1\").length > 0, '删除注释，显示 <code>h1</code> 元素。');"
         },
         {
           "text":
-            "Make your <code>h2</code> element visible on your page by uncommenting it.",
+            "删除注释，显示 <code>h2</code> 元素。",
           "testString":
-            "assert($(\"h2\").length > 0, 'Make your <code>h2</code> element visible on your page by uncommenting it.');"
+            "assert($(\"h2\").length > 0, '删除注释，显示 <code>h2</code> 元素。');"
         },
         {
           "text":
-            "Make your <code>p</code> element visible on your page by uncommenting it.",
+            "删除注释，显示 <code>p</code> 元素。",
           "testString":
-            "assert($(\"p\").length > 0, 'Make your <code>p</code> element visible on your page by uncommenting it.');"
+            "assert($(\"p\").length > 0, '删除注释，显示 <code>p</code> 元素。');"
         },
         {
           "text":
-            "Be sure to delete all trailing comment tags&#44; i.e. <code>--&#62;</code>.",
+            "确保你删除了后面的评论标记 &#44; 如 <code>--&#62;</code>。",
           "testString":
-            "assert(!/[^fc]-->/gi.test(code.replace(/ *<!--[^fc]*\\n/g,'')), 'Be sure to delete all trailing comment tags&#44; i.e. <code>--&#62;</code>.');"
+            "assert(!/[^fc]-->/gi.test(code.replace(/ *<!--[^fc]*\\n/g,'')), '确保你删除了后面的评论标记 &#44; 如 <code>--&#62;</code>。');"
         }
       ],
       "challengeType": 0,
@@ -460,43 +460,43 @@
     },
     {
       "id": "bad87fee1348bd9aedf08804",
-      "title": "Comment out HTML",
+      "title": "注释掉 HTML",
       "description": [
-        "Remember that in order to start a comment, you need to use <code>&#60;!--</code> and to end a comment, you need to use <code>--&#62;</code>",
-        "Here you'll need to end the comment before your <code>h2</code> element begins.",
+        "还记得吗？用 <code>&#60;!--</code> 来开始注释，用 <code>--&#62;</code> 来结束注释。",
+        "在本关里你需要在 <code>h2</code> 元素开始的地方结束注释。",
         "<hr>",
-        "Comment out your <code>h1</code> element and your <code>p</code> element, but not your <code>h2</code> element."
+        "注释掉 <code>h1</code> 元素和 <code>p</code> 元素, 但是不要注释 <code>h2</code> 元素。"
       ],
       "tests": [
         {
           "text":
-            "Comment out your <code>h1</code> element so that it is not visible on your page.",
+            "注释掉 <code>h1</code> 元素，使它不可见。",
           "testString":
-            "assert(($(\"h1\").length === 0), 'Comment out your <code>h1</code> element so that it is not visible on your page.');"
+            "assert(($(\"h1\").length === 0), '注释掉 <code>h1</code> 元素，使它不可见。');"
         },
         {
           "text":
-            "Leave your <code>h2</code> element uncommented so that it is visible on your page.",
+            "不要注释掉 <code>h2</code> 元素，让它显示在页面中。",
           "testString":
-            "assert(($(\"h2\").length > 0), 'Leave your <code>h2</code> element uncommented so that it is visible on your page.');"
+            "assert(($(\"h2\").length > 0), '不要注释掉 <code>h2</code> 元素，让它显示在页面中。');"
         },
         {
           "text":
-            "Comment out your <code>p</code> element so that it is not visible on your page.",
+            "注释掉 <code>p</code> 元素，使它不可见。",
           "testString":
-            "assert(($(\"p\").length === 0), 'Comment out your <code>p</code> element so that it is not visible on your page.');"
+            "assert(($(\"p\").length === 0), '注释掉 <code>p</code> 元素，使它不可见。');"
         },
         {
           "text":
-            "Be sure to close each of your comments with <code>--&#62;</code>.",
+            "确保用 <code>--&#62;</code> 结束注释。",
           "testString":
-            "assert(code.match(/[^fc]-->/g).length > 1, 'Be sure to close each of your comments with <code>--&#62;</code>.');"
+            "assert(code.match(/[^fc]-->/g).length > 1, '确保用 <code>--&#62;</code> 结束注释。');"
         },
         {
           "text":
-            "Do not change the order of the <code>h1</code> <code>h2</code> or <code>p</code> in the code.",
+            "不要改变 <code>h1</code> <code>h2</code> 或者 <code>p</code> 在代码里的顺序。",
           "testString":
-            "assert((code.match(/<([a-z0-9]){1,2}>/g)[0]===\"<h1>\" && code.match(/<([a-z0-9]){1,2}>/g)[1]===\"<h2>\" && code.match(/<([a-z0-9]){1,2}>/g)[2]===\"<p>\") , 'Do not change the order of the <code>h1</code> <code>h2</code> or <code>p</code> in the code.');"
+            "assert((code.match(/<([a-z0-9]){1,2}>/g)[0]===\"<h1>\" && code.match(/<([a-z0-9]){1,2}>/g)[1]===\"<h2>\" && code.match(/<([a-z0-9]){1,2}>/g)[2]===\"<p>\") , '不要改变 <code>h1</code> <code>h2</code> 或者 <code>p</code> 在代码里的顺序。');"
         }
       ],
       "challengeType": 0,
@@ -558,9 +558,9 @@
     },
     {
       "id": "bad87fed1348bd9aedf08833",
-      "title": "Delete HTML Elements",
+      "title": "删除 HTML 元素",
       "description": [
-        "Our phone doesn't have much vertical space.",
+        "手机的垂直空间是有限的。",
         "Let's remove the unnecessary elements so we can start building our CatPhotoApp.",
         "<hr>",
         "Delete your <code>h1</code> element so we can simplify our view."
