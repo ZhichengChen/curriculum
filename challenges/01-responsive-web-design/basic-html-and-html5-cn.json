@@ -561,25 +561,25 @@
       "title": "删除 HTML 元素",
       "description": [
         "手机的垂直空间是有限的。",
-        "Let's remove the unnecessary elements so we can start building our CatPhotoApp.",
+        "让我们删除掉一些不必要的元素，开始构建我们的猫咪相册应用。",
         "<hr>",
-        "Delete your <code>h1</code> element so we can simplify our view."
+        "删除 <code>h1</code> 元素来简化视图。"
       ],
       "tests": [
         {
-          "text": "Delete your <code>h1</code> element.",
+          "text": "删除 <code>h1</code> 元素。",
           "testString":
-            "assert(($(\"h1\").length == 0), 'Delete your <code>h1</code> element.');"
+            "assert(($(\"h1\").length == 0), '删除 <code>h1</code> 元素。');"
         },
         {
-          "text": "Leave your <code>h2</code> element on the page.",
+          "text": "保留 <code>h2</code> 元素。",
           "testString":
-            "assert(($(\"h2\").length > 0), 'Leave your <code>h2</code> element on the page.');"
+            "assert(($(\"h2\").length > 0), '保留 <code>h2</code> 元素。');"
         },
         {
-          "text": "Leave your <code>p</code> element on the page.",
+          "text": "保留 <code>p</code> 元素。",
           "testString":
-            "assert(($(\"p\").length > 0), 'Leave your <code>p</code> element on the page.');"
+            "assert(($(\"p\").length > 0), '保留 <code>p</code> 元素。');"
         }
       ],
       "challengeType": 0,
@@ -639,56 +639,56 @@
     },
     {
       "id": "bad87fee1348bd9aecf08801",
-      "title": "Introduction to HTML5 Elements",
+      "title": "HTML5 元素介绍",
       "description": [
-        "HTML5 introduces more descriptive HTML tags. These include <code>header</code>, <code>footer</code>, <code>nav</code>, <code>video</code>, <code>article</code>, <code>section</code> and others.",
-        "These tags make your HTML easier to read, and also help with Search Engine Optimization (SEO) and accessibility.",
-        "The <code>main</code> HTML5 tag helps search engines and other developers find the main content of your page.",
-        "<strong>Note</strong><br>Many of the new HTML5 tags and their benefits are covered in the Applied Accessibility section.",
+        "HTML5 引进的更多的 HTML 标签。包括 <code>header</code>，<code>footer</code>，<code>nav</code>，<code>video</code>，<code>article</code>，<code>section</code>等。",
+        "这些新引入的标签让你的 HTML 更易读，更易于搜索引擎优化（SEO）和访问。",
+        "<code>main</code> HTML5 标签帮助搜索引擎和其它开发者更容易的找到你页面的主要内容。",
+        "<strong>注意</strong><br>很多新的 HTML5 标签和他们的好处我们会在后面的应用可访问性（the Applied Accessibility）章节里涉及到。",
         "<hr>",
-        "Create a second <code>p</code> element after the existing <code>p</code> element with the following kitty ipsum text: <code>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</code>",
-        "Wrap the paragraphs with an opening and closing <code>main</code> tag."
+        "在 <code>p</code> 元素下面新建另一个 <code>p</code> 元素，里面包含如下 kitty ipsum 文字：<code>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</code>",
+        "所有的段落用开始和结束 <code>main</code> 标签包含起来。"
       ],
       "tests": [
         {
-          "text": "You need 2 <code>p</code> elements with Kitty Ipsum text.",
+          "text": "你需要两个含有 Kitty Ipsum 文字的 <code>p</code> 元素。",
           "testString":
-            "assert($(\"p\").length > 1, 'You need 2 <code>p</code> elements with Kitty Ipsum text.');"
+            "assert($(\"p\").length > 1, '你需要两个含有 Kitty Ipsum 文字的 <code>p</code> 元素。');"
         },
         {
           "text":
-            "Make sure each of your <code>p</code> elements has a closing tag.",
+            "确保你的每一个 <code>p</code> 元素都有一个关闭标签。",
           "testString":
-            "assert(code.match(/<\\/p>/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, 'Make sure each of your <code>p</code> elements has a closing tag.');"
+            "assert(code.match(/<\\/p>/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, '确保你的每一个 <code>p</code> 元素都有一个关闭标签。');"
         },
         {
           "text":
-            "Your <code>p</code> element should contain the first few words of the provided additional <code>kitty ipsum text</code>.",
+            "<code>p</code> 元素里应该包含 <code>kitty ipsum 文字</code>里的前几个字。",
           "testString":
-            "assert.isTrue((/Purr\\s+jump\\s+eat/gi).test($(\"p\").text()), 'Your <code>p</code> element should contain the first few words of the provided additional <code>kitty ipsum text</code>.');"
+            "assert.isTrue((/Purr\\s+jump\\s+eat/gi).test($(\"p\").text()), '<code>p</code> 元素里应该包含 <code>kitty ipsum 文字</code>里的前几个字。');"
         },
         {
-          "text": "Your code should have one <code>main</code> element.",
+          "text": "你的代码里必须有一个 <code>main</code> 元素。",
           "testString":
-            "assert($('main').length === 1, 'Your code should have one <code>main</code> element.');"
-        },
-        {
-          "text":
-            "The <code>main</code> element should have two paragraph elements as children.",
-          "testString":
-            "assert($(\"main\").children(\"p\").length === 2, 'The <code>main</code> element should have two paragraph elements as children.');"
+            "assert($('main').length === 1, '你的代码里必须有一个 <code>main</code> 元素。');"
         },
         {
           "text":
-            "The opening <code>main</code> tag should come before the first paragraph tag.",
+            "<code>main</code> 元素里应该有两个段落 paragraph 子元素。",
           "testString":
-            "assert(code.match(/<main>\\s*?<p>/g), 'The opening <code>main</code> tag should come before the first paragraph tag.');"
+            "assert($(\"main\").children(\"p\").length === 2, '<code>main</code> 元素里应该有两个段落 paragraph 子元素。');"
         },
         {
           "text":
-            "The closing <code>main</code> tag should come after the second closing paragraph tag.",
+            "<code>main</code> 元素的开始标签应该在第一个段落元素之前。",
           "testString":
-            "assert(code.match(/<\\/p>\\s*?<\\/main>/g), 'The closing <code>main</code> tag should come after the second closing paragraph tag.');"
+            "assert(code.match(/<main>\\s*?<p>/g), '<code>main</code> 元素的开始标签应该在第一个段落元素之前。');"
+        },
+        {
+          "text":
+            "<code>main</code> 元素的结束标签应该在第二个段落元素的技术标签的后面。",
+          "testString":
+            "assert(code.match(/<\\/p>\\s*?<\\/main>/g), '<code>main</code> 元素的结束标签应该在第二个段落元素的技术标签的后面。');"
         }
       ],
       "challengeType": 0,
@@ -723,41 +723,41 @@
     },
     {
       "id": "bad87fee1348bd9aedf08812",
-      "title": "Add Images to Your Website",
+      "title": "给你的网站添加一个图片",
       "description": [
-        "You can add images to your website by using the <code>img</code> element, and point to a specific image's URL using the <code>src</code> attribute.",
-        "An example of this would be:",
+        "你可以使用 <code>img</code> 元素来添加一个图片，使用元素的 <code>src</code> 属性来指定图片的地址。",
+        "下面是一个例子：",
         "<code>&#60img src=\"https://www.your-image-source.com/your-image.jpg\"&#62</code>",
-        "Note that <code>img</code> elements are self-closing.",
-        "All <code>img</code> elements <strong>must</strong> have an <code>alt</code> attribute. The text inside an <code>alt</code> attribute is used for screen readers to improve accessibility and is displayed if the image fails to load.",
-        "Note: If the image is purely decorative, using an empty <code>alt</code> attribute is a best practice.",
-        "Ideally the <code>alt</code> attribute should not contain special characters unless needed.",
-        "Let's add an <code>alt</code> attribute to our <code>img</code> example above:",
+        "需要注意的是 <code>img</code> 元素是自关闭的。",
+        "所有的 <code>img</code> 元素<strong>必须</strong>有一个 <code>alt</code> 属性。<code>alt</code> 属性里面的文字用来给视障人员提供屏幕阅读以提高应用的可访问性，并且在图片加载失败的时候显示该文字。",
+        "注意：如果图片只是简单的用来装饰，最佳的实践是给图片添加一个空的 <code>alt</code> 属性。",
+        "理想情况下 <code>alt</code> 属性若非必需不要包含特殊字符。",
+        "下面是给图片添加了 <code>alt</code> 属性的示例：",
         "<code>&#60img src=\"https://www.your-image-source.com/your-image.jpg\" alt=\"Author standing on a beach with two thumbs up.\"&#62</code>",
         "<hr>",
-        "Let's try to add an image to our website:",
-        "Insert an <code>img</code> tag, before the <code>h2</code> element.",
-        "Now set the <code>src</code> attribute so that it points to this url:",
+        "让我们试着给我们的网站添加一个图片：",
+        "在 <code>h2</code> 元素前面，插入一个 <code>img</code> 标签。",
+        "现在设置图片的 <code>src</code> 属性为下面这个地址：",
         "<code>https://bit.ly/fcc-relaxing-cat</code>",
-        "Finally don't forget to give your image an <code>alt</code> text."
+        "最后不要忘了给你的图片添加一个 <code>alt</code> 文字。"
       ],
       "tests": [
         {
-          "text": "Your page should have an image element.",
+          "text": "你的页面应该有一个图片元素。",
           "testString":
-            "assert($(\"img\").length > 0, 'Your page should have an image element.');"
+            "assert($(\"img\").length > 0, '你的页面应该有一个图片元素。');"
         },
         {
           "text":
-            "Your image should have a <code>src</code> attribute that points to the kitten image.",
+            "你的图片应该有一个指向 kitten 图片的 <code>src</code> 属性。",
           "testString":
-            "assert(new RegExp(\"\\/\\/bit.ly\\/fcc-relaxing-cat|\\/\\/s3.amazonaws.com\\/freecodecamp\\/relaxing-cat.jpg\", \"gi\").test($(\"img\").attr(\"src\")), 'Your image should have a <code>src</code> attribute that points to the kitten image.');"
+            "assert(new RegExp(\"\\/\\/bit.ly\\/fcc-relaxing-cat|\\/\\/s3.amazonaws.com\\/freecodecamp\\/relaxing-cat.jpg\", \"gi\").test($(\"img\").attr(\"src\")), '你的图片应该有一个指向 kitten 图片的 <code>src</code> 属性。');"
         },
         {
           "text":
-            "Your image element <strong>must</strong> have an <code>alt</code> attribute.",
+            "你的图片元素<strong>必须</strong>有一个 <code>alt</code> 属性。",
           "testString":
-            "assert(code.match(/alt\\s*?=\\s*?(\\\"|\\').*(\\\"|\\')/), 'Your image element <strong>must</strong> have an <code>alt</code> attribute.');"
+            "assert(code.match(/alt\\s*?=\\s*?(\\\"|\\').*(\\\"|\\')/), '你的图片元素<strong>必须</strong>有一个 <code>alt</code> 属性。');"
         }
       ],
       "challengeType": 0,
@@ -840,32 +840,32 @@
     },
     {
       "id": "bad87fee1348bd9aedf08816",
-      "title": "Link to External Pages with Anchor Elements",
+      "title": "使用超链接元素跳转到另一个页面",
       "description": [
-        "You can use <code>anchor</code> elements to link to content outside of your web page.",
-        "<code>anchor</code> elements need a destination web address called an <code>href</code> attribute. They also need anchor text. Here's an example:",
+        "你可以使用 <code>a</code> 元素连接到你网页外面的内容。",
+        "<code>anchor</code> 元素需要一个叫做 <code>href</code> 的属性来指定目的地址。他们也需要一个超链接文字。这里是一个例子：",
         "<code>&#60;a href=\"https://freecodecamp.org\">this links to freecodecamp.org&#60;/a&#62;</code>",
-        "Then your browser will display the text <strong>\"this links to freecodecamp.org\"</strong> as a link you can click. And that link will take you to the web address <strong>https://www.freecodecamp.org</strong>.",
+        "你的浏览器会显示你可以点击的链接文字 <strong>\"this links to freecodecamp.org\"</strong> 。 这个链接会挑战到页面 <strong>https://www.freecodecamp.org</strong>。",
         "<hr>",
-        "Create an <code>a</code> element that links to <code>http://freecatphotoapp.com</code> and has \"cat photos\" as its <code>anchor text</code>."
+        "创建一个 <code>a</code> 元素链接到 <code>http://freecatphotoapp.com</code>，它的链接文字为 \"cat photos\"。"
       ],
       "tests": [
         {
           "text":
-            "Your <code>a</code> element should have the <code>anchor text</code> of \"cat photos\".",
+            "<code>a</code> 应该有 \"cat photos\" 做为 <code>anchor text</code>。",
           "testString":
-            "assert((/cat photos/gi).test($(\"a\").text()), 'Your <code>a</code> element should have the <code>anchor text</code> of \"cat photos\".');"
+            "assert((/cat photos/gi).test($(\"a\").text()), '<code>a</code> 应该有 \"cat photos\" 做为 <code>anchor text</code>。');"
         },
         {
           "text":
-            "You need an <code>a</code> element that links to <code>http&#58;//freecatphotoapp<wbr>.com</code>",
+            "需要一个 <code>a</code> 元素链接到 <code>http&#58;//freecatphotoapp<wbr>.com</code>",
           "testString":
-            "assert(/http:\\/\\/(www\\.)?freecatphotoapp\\.com/gi.test($(\"a\").attr(\"href\")), 'You need an <code>a</code> element that links to <code>http&#58;//freecatphotoapp<wbr>.com</code>');"
+            "assert(/http:\\/\\/(www\\.)?freecatphotoapp\\.com/gi.test($(\"a\").attr(\"href\")), '需要一个 <code>a</code> 元素链接到 <code>http&#58;//freecatphotoapp<wbr>.com</code>');"
         },
         {
-          "text": "Make sure your <code>a</code> element has a closing tag.",
+          "text": "确保你的 <code>a</code> 元素有一个关闭标签。",
           "testString":
-            "assert(code.match(/<\\/a>/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, 'Make sure your <code>a</code> element has a closing tag.');"
+            "assert(code.match(/<\\/a>/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, '确保你的 <code>a</code> 元素有一个关闭标签。');"
         }
       ],
       "challengeType": 0,
