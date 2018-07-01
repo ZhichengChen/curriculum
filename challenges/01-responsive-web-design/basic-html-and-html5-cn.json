@@ -1040,68 +1040,68 @@
     },
     {
       "id": "bad87fee1348bd9aede08817",
-      "title": "Nest an Anchor Element within a Paragraph",
+      "title": "在段落里面添加超链接",
       "description": [
-        "You can nest links within other text elements.",
+        "你可以在其它文本元素里嵌套超链接。",
         "<blockquote>&#60;p&#62;<br> Here's a &#60;a target=\"_blank\" href=\"http://freecodecamp.org\"&#62; link to freecodecamp.org&#60;/a&#62; for you to follow.<br>&#60;/p&#62;</blockquote>",
-        "Let's break down the example:",
-        "Normal text is wrapped in the <code>p</code> element:<br> <code>&#60;p&#62; Here's a ... for you to follow. &#60;/p&#62;</code>",
-        "Next is the <code>anchor</code> element <code>&#60;a&#62;</code> (which requires a closing tag <code>&#60;/a&#62;</code>):<br>  <code>&#60;a&#62; ... &#60;/a&#62;</code>",
-        "<code>target</code> is an anchor tag attribute that specifies where to open the link and the value <code>\"_blank\"</code> specifies to open the link in a new tab",
-        "<code>href</code> is an anchor tag attribute that contains the URL address of the link:<br>  <code>&#60;a href=\"http://freecodecamp.org\"> ... &#60;/a&#62;</code>",
-        "The text, <strong>\"link to freecodecamp.org\"</strong>, within the anchor element called <code>anchor text</code>, will display a link to click:<br>  <code>&#60;a href=\" ... \"&#62;link to freecodecamp.org&#60;/a&#62;</code>",
-        "The final output of the example will look like this:<br><p>Here's a <a target=\"_blank\" href=\"http://freecodecamp.org\"> link to freecodecamp.org</a> for you to follow.</p>",
+        "让我们来分析一下这个例子：",
+        "首先文字包含在 <code>p</code> 元素里面：<br> <code>&#60;p&#62; Here's a ... for you to follow. &#60;/p&#62;</code>",
+        "接下来超链接（<code>anchor</code>）元素 <code>&#60;a&#62;</code>（别忘了关闭标签 <code>&#60;/a&#62;</code>）：<br>  <code>&#60;a&#62; ... &#60;/a&#62;</code>",
+        "<code>target</code> 是超链接标签的属性，它指定了链接在哪里打开，值 <code>\"_blank\"</code> 代表在新标签页打开链接。",
+        "<code>href</code> 也是超链接标签的属性，它指定了链接的 URL 地址：<br>  <code>&#60;a href=\"http://freecodecamp.org\"> ... &#60;/a&#62;</code>",
+        "在超链接里面的文本，<strong>\"link to freecodecamp.org\"</strong>，叫做超链接文本（<code>anchor text</code>），会显示为一个可以点击额链接：<br>  <code>&#60;a href=\" ... \"&#62;link to freecodecamp.org&#60;/a&#62;</code>",
+        "例子的最终的显示效果如下：<br><p>Here's a <a target=\"_blank\" href=\"http://freecodecamp.org\"> link to freecodecamp.org</a> for you to follow.</p>",
         "<hr>",
-        "Now nest your existing <code>a</code> element within a new <code>p</code> element (just after the existing <code>main</code> element). The new paragraph should have text that says \"View more cat photos\", where \"cat photos\" is a link, and the rest of the text is plain text."
+        "现在在已经存在的 <code>a</code> 元素外面嵌套一个新的 <code>p</code> 元素（就在 元素下面）。 新的段落应该显示\"View more cat photos\" ，其中 \"cat photos\" 是链接，其它文字是纯文本。"
       ],
       "tests": [
         {
           "text":
-            "You need an <code>a</code> element that links to \"http://freecatphotoapp.com\".",
+            "你需要一个链接到 \"http://freecatphotoapp.com\" 的 <code>a</code> 元素。",
           "testString":
-            "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").length > 0 || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").length > 0), 'You need an <code>a</code> element that links to \"http://freecatphotoapp.com\".');"
+            "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").length > 0 || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").length > 0), '你需要一个链接到 \"http://freecatphotoapp.com\" 的 <code>a</code> 元素。');"
         },
         {
           "text":
-            "Your <code>a</code> element should have the anchor text of \"cat photos\"",
+            "<code>a</code> 元素的链接文本应该是 \"cat photos\"",
           "testString":
-            "assert($(\"a\").text().match(/cat\\sphotos/gi), 'Your <code>a</code> element should have the anchor text of \"cat photos\"');"
+            "assert($(\"a\").text().match(/cat\\sphotos/gi), '<code>a</code> 元素的链接文本应该是 \"cat photos\"');"
         },
         {
           "text":
-            "Create a new <code>p</code> element around your <code>a</code> element. There should be at least 3 total <code>p</code> tags in your HTML code.",
+            "在你的 <code>a</code> 元素外面创建一个新的 <code>p</code> 元素。你的 HTML 代码里至少应该有3个 <code>p</code> 标签。",
           "testString":
-            "assert($(\"p\") && $(\"p\").length > 2, 'Create a new <code>p</code> element around your <code>a</code> element. There should be at least 3 total <code>p</code> tags in your HTML code.');"
+            "assert($(\"p\") && $(\"p\").length > 2, '在你的 <code>a</code> 元素外面创建一个新的 <code>p</code> 元素。在你的 HTML 代码里至少应该有3个 <code>p</code> 标签。');"
         },
         {
           "text":
-            "Your <code>a</code> element should be nested within your new <code>p</code> element.",
+            "你的 <code>a</code> 元素应该嵌套在你新创建的 <code>p</code> 元素里。",
           "testString":
-            "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().is(\"p\") || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().is(\"p\")), 'Your <code>a</code> element should be nested within your new <code>p</code> element.');"
+            "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().is(\"p\") || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().is(\"p\")), '你的 <code>a</code> 元素应该嵌套在你新创建的 <code>p</code> 元素里。');"
         },
         {
           "text":
-            "Your <code>p</code> element should have the text \"View more \" (with a space after it).",
+            "你的 <code>p</code> 元素里面应该包含文字 \"View more \" （后面有一个空格）。",
           "testString":
-            "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi) || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi)), 'Your <code>p</code> element should have the text \"View more \" (with a space after it).');"
+            "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi) || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi)), '你的 <code>p</code> 元素里面应该包含文字 \"View more \" （后面有一个空格）。');"
         },
         {
           "text":
-            "Your <code>a</code> element should <em>not</em> have the text \"View more\".",
+            "你的 <code>a</code> 元素<em>不</em>应该包含文字 \"View more\"。",
           "testString":
-            "assert(!$(\"a\").text().match(/View\\smore/gi), 'Your <code>a</code> element should <em>not</em> have the text \"View more\".');"
+            "assert(!$(\"a\").text().match(/View\\smore/gi), '你的 <code>a</code> 元素<em>不</em>应该包含文字 \"View more\"。);"
         },
         {
           "text":
-            "Make sure each of your <code>p</code> elements has a closing tag.",
+            "确保你的 <code>p</code> 元素有一个关闭标签。",
           "testString":
-            "assert(code.match(/<\\/p>/g) && code.match(/<p/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, 'Make sure each of your <code>p</code> elements has a closing tag.');"
+            "assert(code.match(/<\\/p>/g) && code.match(/<p/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, '确保你的 <code>p</code> 元素有一个关闭标签。');"
         },
         {
           "text":
-            "Make sure each of your <code>a</code> elements has a closing tag.",
+            "确保你的 <code>a</code> 元素有一个关闭标签。",
           "testString":
-            "assert(code.match(/<\\/a>/g) && code.match(/<a/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, 'Make sure each of your <code>a</code> elements has a closing tag.');"
+            "assert(code.match(/<\\/a>/g) && code.match(/<a/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, '确保你的 <code>a</code> 元素有一个关闭标签。');"
         }
       ],
       "challengeType": 0,
